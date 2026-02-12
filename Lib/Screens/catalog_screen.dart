@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'live_screen.dart';
 
 class CatalogScreen extends StatelessWidget {
   @override
@@ -9,6 +10,16 @@ class CatalogScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text('Catálogo de productos'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => LiveScreen()),
+          );
+        },
+        child: Icon(Icons.live_tv),
+        tooltip: 'En Vivo',
       ),
     );
   }
